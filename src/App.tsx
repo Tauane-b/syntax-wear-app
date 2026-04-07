@@ -1,6 +1,8 @@
+import { Header } from "./components/Header";
+
 function App() {
   return <>
-  <p className="bg-error">HELLO WORD!</p>
+    <Header />
   </>;
 }
 
