@@ -1,6 +1,6 @@
 function App() {
   return <>
-  <p className="text-red-500 text-center">HELLO WORD!</p>
+  <p className="bg-error">HELLO WORD!</p>
   </>;
 }
 
