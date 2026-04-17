@@ -23,11 +23,11 @@
   --color-footer-bg: hsl(0, 0%, 20%);
   --color-footer-hover: hsl(0, 0%, 80%);
 
-  --font-display: "Ubuntu Regular", sans-serif;
+  --font-display: "Ubuntu", sans-serif;
 }
 
 @font-face {
-    font-family: 'Ubuntu Medium';
+    font-family: 'Ubuntu';
     src: url('/fonts/ubuntu-medium-500.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'Ubuntu Regular';
+    font-family: 'Ubuntu';
     src: url('/fonts/ubuntu-regular-400.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -59,4 +59,28 @@ body {
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
     scrollbar-width: none;  /* Firefox */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  grid-template-areas:
+    "highlight highlight sneaker-purple sneaker-purple"
+    "highlight highlight model sneaker-color"
+    "sneaker-white sneaker-white model sneaker-silver";
+  gap: 30px;
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "highlight highlight"
+      "sneaker-white sneaker-white"
+      "model sneaker-color"
+      "model sneaker-silver"
+      "sneaker-purple sneaker-purple";
+  }
 }

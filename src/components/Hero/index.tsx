@@ -12,8 +12,8 @@ export const Hero = () => {
         />
 
         <div className="absolute  w-full bottom-0 flex justify-end items-center text-center px-6 mb-px-24 pb-32 ">
-          <div className="flex flex-col  text-white items-center w-[388px]">
-            <h2 className="text-x1 font-medium leading-normal tracking-wider mb-2.5">Krypton One</h2>
+          <div className="flex flex-col  text-white items-center w-/[388px]">
+            <h2 className="text-xl font-medium leading-normal tracking-wider mb-2.5">Krypton One</h2>
             <h1 className="text-2xl leading-9 tracking-widest mb-10">Transforme Qualquer passo em presença </h1>
 
             <div className="flex gap-3.5">
