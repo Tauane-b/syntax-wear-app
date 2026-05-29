@@ -24,7 +24,7 @@ function RouteComponent() {
         </button>
 
         <p className="text-center text-sm text-gray-600 mt-6">
-          Já tem uma conta? {""}
+          Já tem uma conta?
           <a href="/sign-in" className="text-[#5433EB] hover:underline">
             Entrar
           </a>

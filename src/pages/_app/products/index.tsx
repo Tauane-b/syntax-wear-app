@@ -1,9 +1,19 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import { ProductList } from "../../../components/ProductList";
+import { products } from "../../../mocks/products";
 
-export const Route = createFileRoute('/_app/products/')({
+export const Route = createFileRoute("/_app/products/")({
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
-  return <div>Hello "/_app/products/"!</div>
+  return (
+    <div className="container pt-44 md:pt-54  pb-10  mb:px-10 text-black bg-surface mb-10">
+      <h1 className=" text-3xl text-center mb-3">Lista de Produtos</h1>
+      <h2 className="text-center mb-10 p-2">
+        Conforto expecional para suas aventuras do dia a dia
+      </h2>
+      <ProductList products={products} />
+    </div>
+  );
 }
