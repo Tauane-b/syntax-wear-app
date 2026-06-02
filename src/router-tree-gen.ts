@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './pages/__root'
 import { Route as AppLayoutRouteImport } from './pages/_app/layout'
 import { Route as AppIndexRouteImport } from './pages/_app/index'
 import { Route as AppProductsIndexRouteImport } from './pages/_app/products/index'
+import { Route as AppProductsProductIdRouteImport } from './pages/_app/products/$productId'
 import { Route as AppAuthSignUpRouteImport } from './pages/_app/_auth/sign-up'
 import { Route as AppAuthSignInRouteImport } from './pages/_app/_auth/sign-in'
 
@@ -29,6 +30,11 @@ const AppProductsIndexRoute = AppProductsIndexRouteImport.update({
   path: '/products/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
+const AppProductsProductIdRoute = AppProductsProductIdRouteImport.update({
+  id: '/products/$productId',
+  path: '/products/$productId',
+  getParentRoute: () => AppLayoutRoute,
+} as any)
 const AppAuthSignUpRoute = AppAuthSignUpRouteImport.update({
   id: '/_auth/sign-up',
   path: '/sign-up',
@@ -44,12 +50,14 @@ export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/sign-in': typeof AppAuthSignInRoute
   '/sign-up': typeof AppAuthSignUpRoute
+  '/products/$productId': typeof AppProductsProductIdRoute
   '/products/': typeof AppProductsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof AppIndexRoute
   '/sign-in': typeof AppAuthSignInRoute
   '/sign-up': typeof AppAuthSignUpRoute
+  '/products/$productId': typeof AppProductsProductIdRoute
   '/products': typeof AppProductsIndexRoute
 }
 export interface FileRoutesById {
@@ -58,19 +66,26 @@ export interface FileRoutesById {
   '/_app/': typeof AppIndexRoute
   '/_app/_auth/sign-in': typeof AppAuthSignInRoute
   '/_app/_auth/sign-up': typeof AppAuthSignUpRoute
+  '/_app/products/$productId': typeof AppProductsProductIdRoute
   '/_app/products/': typeof AppProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sign-in' | '/sign-up' | '/products/'
+  fullPaths:
+    | '/'
+    | '/sign-in'
+    | '/sign-up'
+    | '/products/$productId'
+    | '/products/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sign-in' | '/sign-up' | '/products'
+  to: '/' | '/sign-in' | '/sign-up' | '/products/$productId' | '/products'
   id:
     | '__root__'
     | '/_app'
     | '/_app/'
     | '/_app/_auth/sign-in'
     | '/_app/_auth/sign-up'
+    | '/_app/products/$productId'
     | '/_app/products/'
   fileRoutesById: FileRoutesById
 }
@@ -101,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppProductsIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
+    '/_app/products/$productId': {
+      id: '/_app/products/$productId'
+      path: '/products/$productId'
+      fullPath: '/products/$productId'
+      preLoaderRoute: typeof AppProductsProductIdRouteImport
+      parentRoute: typeof AppLayoutRoute
+    }
     '/_app/_auth/sign-up': {
       id: '/_app/_auth/sign-up'
       path: '/sign-up'
@@ -122,6 +144,7 @@ interface AppLayoutRouteChildren {
   AppIndexRoute: typeof AppIndexRoute
   AppAuthSignInRoute: typeof AppAuthSignInRoute
   AppAuthSignUpRoute: typeof AppAuthSignUpRoute
+  AppProductsProductIdRoute: typeof AppProductsProductIdRoute
   AppProductsIndexRoute: typeof AppProductsIndexRoute
 }
 
@@ -129,6 +152,7 @@ const AppLayoutRouteChildren: AppLayoutRouteChildren = {
   AppIndexRoute: AppIndexRoute,
   AppAuthSignInRoute: AppAuthSignInRoute,
   AppAuthSignUpRoute: AppAuthSignUpRoute,
+  AppProductsProductIdRoute: AppProductsProductIdRoute,
   AppProductsIndexRoute: AppProductsIndexRoute,
 }
 
