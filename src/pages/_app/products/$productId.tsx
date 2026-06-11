@@ -67,7 +67,7 @@ function RouteComponent() {
                 placeholder="Digite seu CEP"
                 className="border border-[#c0c0c0]rounded-md p-3"
               />
-              <button
+              <button 
                 type="submit"
                 className="bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-800"
               >

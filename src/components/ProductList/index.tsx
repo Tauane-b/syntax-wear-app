@@ -10,6 +10,7 @@ export const ProductList = ({ products }: ProductListProps) => {
     <section className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(350px,1fr))] mb-10">
       {products.map((product) => (
         <CardProduct
+          key={product.id}
           product={product}
         />
       ))}
