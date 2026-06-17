@@ -8,7 +8,7 @@ export const Route = createFileRoute("/_app/about/")({
 function RouteComponent() {
   return (
     <section className="flex flex-col md:flex-row items-center md:h-screen">
-      <div className="h-100 mb:h-full md:w-1/2">
+      <div className=" h-100 md:h-full md:w-1/2">
         <img
           src={bannerAbout}
           alt="Homem sentado com tênis da marca"
