@@ -6,8 +6,10 @@ import galeriaTenisBrancoPreto from "@/assets/images/galeria-tenis-branco-e-pret
 import galeriaTenisCinza from "@/assets/images/galeria-tenis-cinza.jpg";
 import { Overlay } from "../Overlay";
 import Button from "../Button";
+import { useRouter } from "@tanstack/react-router";
 
 export const Gallery = () => {
+  const router = useRouter();
   return (
     <section className="container mb-10">
       <div className="gallery-grid w-full">
@@ -26,8 +28,32 @@ export const Gallery = () => {
             subtitle="Estilo Urbano com atitude"
             className="inset-0 justify-center"
           >
-            <Button variant="secondary">Feminino</Button>
-            <Button variant="secondary">Masculino</Button>
+            <Button
+              variant="secondary"
+              onClick={() =>
+                router.navigate({
+                  to: "/products/category/$category",
+                  params: {
+                    category: "Feminino",
+                  },
+                })
+              }
+            >
+              Feminino
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() =>
+                router.navigate({
+                  to: "/products/category/$category",
+                  params: {
+                    category: "Masculino",
+                  },
+                })
+              }
+            >
+              Masculino
+            </Button>
           </Overlay>
         </article>
 

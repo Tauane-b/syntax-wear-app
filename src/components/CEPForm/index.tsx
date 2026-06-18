@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCEPForm } from "../CEPForm/cep-form-schema";
+import { useCEPForm } from "../CEPForm/cep-Form-schema";
 import type { Address } from "../../interfaces/address";
 import { formatCurrency } from "../../utils/format-currency";
 
