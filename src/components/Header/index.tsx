@@ -30,9 +30,7 @@ export const Header = () => {
             <ul className="flex gap-10">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href}>
-                    {link.name}
-                  </Link>
+                  <Link to={link.href}>{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -51,11 +49,12 @@ export const Header = () => {
                 <MenuMobile navLinks={navLinks} />
               </li>
 
-              <li className="hidden lg-block">
-                <a href="#">
+              <li className="hidden lg:block">
+                <Link to="/sign-up">
                   <img src={IconUser} alt="Ícone de login" />
-                </a>
+                </Link>
               </li>
+
               <li className="hidden lg:block">
                 <Link to="/our-stores">
                   <img src={IconAbout} alt="Ícone de sobre" />

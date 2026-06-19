@@ -6,6 +6,11 @@ import { Hero } from "../../components/Hero";
 
 export const Route = createFileRoute('/_app/')({
   component: RouteComponent,
+     head: () => ({
+   meta:[
+    {title:'Inicio - SyntaxWear'}
+   ]
+  }) 
 })
 
 function RouteComponent() {
