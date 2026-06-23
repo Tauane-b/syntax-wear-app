@@ -12,12 +12,12 @@ export const RegisterForm = () => {
           {...register("email")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.email
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.email && (
-          <p className="text-xs text-red-600 mt-1">{errors.email.message}</p>
+          <p className="text-xs text-error mt-1">{errors.email.message}</p>
         )}
       </div>
 
@@ -28,12 +28,12 @@ export const RegisterForm = () => {
           {...register("password")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.password
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.password && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.password.message}
           </p>
         )}
@@ -46,12 +46,12 @@ export const RegisterForm = () => {
           {...register("confirmPassword")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.confirmPassword
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:text-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.confirmPassword && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.confirmPassword.message}
           </p>
         )}
@@ -64,12 +64,12 @@ export const RegisterForm = () => {
           {...register("firstName")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.firstName
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:text-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.firstName && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.firstName.message}
           </p>
         )}
@@ -82,12 +82,12 @@ export const RegisterForm = () => {
           {...register("lastName")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.lastName
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.lastName && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.lastName.message}
           </p>
         )}
@@ -101,12 +101,12 @@ export const RegisterForm = () => {
           {...register("cpf")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.cpf
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.cpf && (
-          <p className="text-xs text-red-600 mt-1">{errors.cpf.message}</p>
+          <p className="text-xs text-error mt-1">{errors.cpf.message}</p>
         )}
       </div>
 
@@ -117,12 +117,12 @@ export const RegisterForm = () => {
           {...register("birthDate")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.birthDate
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.birthDate && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.birthDate.message}
           </p>
         )}
@@ -136,18 +136,18 @@ export const RegisterForm = () => {
           {...register("cellphone")}
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${
             errors.cellphone
-              ? "border-red-500 focus:ring-red-400"
-              : "border-gray-300 focus:ring-[#5433eb]"
+              ? "border-error focus:ring-error"
+              : "border-border focus:ring-accent"
           }`}
         />
         {errors.cellphone && (
-          <p className="text-xs text-red-600 mt-1">
+          <p className="text-xs text-error mt-1">
             {errors.cellphone.message}
           </p>
         )}
       </div>
 
-      <button disabled={isSubmitting} className="bg-[#5433EB] text-white font-semibold uppercase rounded-md py-3 transition-all hover:bg-[#4320b9] disabled:opacity-50 w-full cursor-pointer mt-4">
+      <button disabled={isSubmitting} className="bg-accent text-white font-semibold uppercase rounded-md py-3 transition-all hover:bg-accent-hover disabled:opacity-50 w-full cursor-pointer mt-4">
         {isSubmitting ? "Enviando..." : "Continuar"}
       </button>
     </form>
