@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# SyntaxWear
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SyntaxWear é um projeto de e-commerce de moda construído com React, TypeScript e Vite. A interface foi organizada como uma loja moderna, com páginas para home, produtos, categorias, sobre a marca, lojas físicas, autenticação e carrinho de compras.
 
-Currently, two official plugins are available:
+## O que é o projeto?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto simula uma experiência de loja online voltada para roupas e acessórios. Entre os principais elementos da aplicação estão:
 
-## React Compiler
+- Página inicial com destaque visual e chamada para ação;
+- Catálogo de produtos com navegação por categorias;
+- Carrinho de compras com interação em drawer;
+- Formulários de login e cadastro;
+- Seção sobre a marca e lojas;
+- Layout responsivo para diferentes telas.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- TanStack Router
+- React Hook Form + Zod
+- React Icons
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Como rodar o projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js instalado
+- npm ou yarn instalado
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Passos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Acesse a pasta do projeto:
+   ```bash
+   cd projeto-syntax-wear
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+4. Abra o navegador no endereço:
+   ```text
+   http://localhost:5173
+   ```
+
+## Scripts disponíveis
+
+- `npm run dev` — inicia o projeto em modo de desenvolvimento;
+- `npm run build` — gera a build de produção;
+- `npm run preview` — visualiza a build localmente;
+- `npm run lint` — executa a análise estática com ESLint.
+
+## Estrutura principal
+
+- `src/components` — componentes reutilizáveis da interface;
+- `src/pages` — páginas e rotas da aplicação;
+- `src/mocks` — dados simulados para produtos e categorias;
+- `src/contexts` — contexto do carrinho;
+- `src/styles` — estilos globais.
+
+Se quiser, posso também adaptar este README para um formato mais profissional, com badges, screenshots e instruções para deploy.
