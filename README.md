@@ -67,4 +67,4 @@ Este projeto simula uma experiência de loja online voltada para roupas e acess�
 - `src/contexts` — contexto do carrinho;
 - `src/styles` — estilos globais.
 
-Se quiser, posso também adaptar este README para um formato mais profissional, com badges, screenshots e instruções para deploy.
+.
